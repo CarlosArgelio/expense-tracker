@@ -17,7 +17,7 @@ export default [
     // '@typescript-eslint/explicit-module-boundary-types': 'off',
     // '@typescript-eslint/no-explicit-any': 'off',
 
-    // 'import/no-unresolved': 'error',
+    'import/no-unresolved': 'error',
     'sort-imports': [
       'error',
       {
