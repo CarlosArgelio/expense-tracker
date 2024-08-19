@@ -18,16 +18,16 @@ export default [
     // '@typescript-eslint/no-explicit-any': 'off',
 
     // 'import/no-unresolved': 'error',
-    // 'sort-imports': [
-    //   'error',
-    //   {
-    //     ignoreCase: false,
-    //     ignoreDeclarationSort: true, // don"t want to sort import lines, use eslint-plugin-import instead
-    //     ignoreMemberSort: false,
-    //     memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
-    //     allowSeparatedGroups: true,
-    //   },
-    // ],
+    'sort-imports': [
+      'error',
+      {
+        ignoreCase: false,
+        ignoreDeclarationSort: true, // don"t want to sort import lines, use eslint-plugin-import instead
+        ignoreMemberSort: false,
+        memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
+        allowSeparatedGroups: true,
+      },
+    ],
     // 'import/order': [
     //   'error',
     //   {
