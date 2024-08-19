@@ -8,14 +8,14 @@ export default [
   {files: ["**/*.{js,mjs,cjs,ts}"]},
   {languageOptions: { globals: {...globals.browser, ...globals.node} }, 
   rules: {
-    // '@typescript-eslint/no-unnecessary-condition': [
-    //   'error',
-    //   { allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing: true },
-    // ],
-    // '@typescript-eslint/interface-name-prefix': 'off',
-    // '@typescript-eslint/explicit-function-return-type': 'off',
-    // '@typescript-eslint/explicit-module-boundary-types': 'off',
-    // '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-unnecessary-condition': [
+      'error',
+      { allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing: true },
+    ],
+    '@typescript-eslint/interface-name-prefix': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
 
     'import/no-unresolved': 'error',
     'sort-imports': [
@@ -28,32 +28,32 @@ export default [
         allowSeparatedGroups: true,
       },
     ],
-    // 'import/order': [
-    //   'error',
-    //   {
-    //     groups: [
-    //       'builtin',
-    //       'external',
-    //       'internal',
-    //       ['sibling', 'parent'],
-    //       'index',
-    //       'unknown',
-    //     ],
-    //     'newlines-between': 'always',
-    //     alphabetize: {
-    //       order: 'asc',
-    //       caseInsensitive: true,
-    //     },
-    //   },
-    // ],
+    'import/order': [
+      'error',
+      {
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          ['sibling', 'parent'],
+          'index',
+          'unknown',
+        ],
+        'newlines-between': 'always',
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true,
+        },
+      },
+    ],
   },
-  // settings: {
-  //   'import/resolver': {
-  //     typescript: {
-  //       project: './tsconfig.json',
-  //     },
-  //   },
-  // },
+  settings: {
+    'import/resolver': {
+      typescript: {
+        project: './tsconfig.json',
+      },
+    },
+  },
 },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
