@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "expense-tracker": "./dist/index.js"
+    "expense-tracker": "./dist/components/presentation/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
