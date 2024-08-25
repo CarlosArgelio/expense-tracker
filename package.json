@@ -7,7 +7,7 @@
     "expense-tracker": "./dist/components/presentation/index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "tsc",
     "prepare": "husky install"
   },
@@ -15,15 +15,22 @@
   "author": "Carlos A Palacios R",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "@babel/preset-typescript": "^7.24.7",
     "@eslint/js": "^9.9.0",
+    "@jest/globals": "^29.7.0",
     "@types/eslint__js": "^8.42.3",
+    "@types/jest": "^29.5.12",
     "@typescript-eslint/eslint-plugin": "^8.2.0",
     "@typescript-eslint/parser": "^8.2.0",
+    "babel-jest": "^29.7.0",
     "eslint": "^9.9.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "globals": "^15.9.0",
     "husky": "^9.1.4",
+    "jest": "^29.7.0",
     "lint-staged": "^15.2.9",
     "prettier": "^3.3.3",
     "ts-node": "^10.9.2",
