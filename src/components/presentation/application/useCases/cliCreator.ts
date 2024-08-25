@@ -1,3 +1,4 @@
+import { ProgramGenrateParams } from "../../domain/interfaces";
 import { GeneratePrograms } from "../../domain/services";
 
 export class CLICreator {
@@ -7,9 +8,9 @@ export class CLICreator {
     this.service = service;
   }
 
-  run() {
+  run(commands: ProgramGenrateParams[]) {
     const createCommnads = this.service;
-    createCommnads.execute();
+    createCommnads.execute(commands);
     return createCommnads.command;
   }
 }

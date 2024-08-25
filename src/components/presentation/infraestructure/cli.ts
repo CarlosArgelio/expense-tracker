@@ -1,7 +1,7 @@
 import { CLICreator } from "../application/useCases/cliCreator";
 import { GeneratePrograms } from "../domain/services";
-import { FlagsCLI } from "../../shared/constants";
 import { ICommand } from "../../shared/interfaces/commands";
+import { commands } from "./commands";
 
 export class AppCreate {
   public program: ICommand;
@@ -11,9 +11,9 @@ export class AppCreate {
   }
 
   create() {
-    const service = new GeneratePrograms(FlagsCLI, this.program);
+    const service = new GeneratePrograms(this.program);
 
-    const useCase = new CLICreator(service).run();
+    const useCase = new CLICreator(service).run(commands);
     this.program = useCase;
   }
 
