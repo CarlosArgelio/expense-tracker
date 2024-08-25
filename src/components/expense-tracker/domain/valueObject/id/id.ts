@@ -5,10 +5,25 @@ export class ID implements IValueObject<ID, number> {
 
   constructor(value: number) {
     this.value = value;
+
+    this.validate();
+  }
+
+  validate() {
+    if (this.value === null || this.value === undefined) {
+      throw new Error("ID cannot be null or undefined");
+    }
+
+    if (this.value <= 0) {
+      throw new Error("ID must be a positive number");
+    }
+
+    if (!Number.isInteger(this.value)) {
+      throw new Error("ID must be an integer");
+    }
   }
 
   equals(valueObject: ID): boolean {
-    console.log("🚀 ~ ID ~ equals ~ valueObject:", valueObject);
-    throw new Error("Method not implemented.");
+    return this.value === valueObject.value;
   }
 }
