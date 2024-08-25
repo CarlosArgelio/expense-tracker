@@ -1,24 +1,25 @@
 import { IValueObject } from "../../interfaces";
 
 export class ID implements IValueObject<ID, number> {
+  private readonly id: number;
   value: number;
 
-  constructor(value: number) {
-    this.value = value;
-
+  constructor(id: number) {
+    this.id = id;
     this.validate();
+    this.value = this.id;
   }
 
   validate() {
-    if (this.value === null || this.value === undefined) {
+    if (this.id === null || this.id === undefined) {
       throw new Error("ID cannot be null or undefined");
     }
 
-    if (this.value <= 0) {
+    if (this.id <= 0) {
       throw new Error("ID must be a positive number");
     }
 
-    if (!Number.isInteger(this.value)) {
+    if (!Number.isInteger(this.id)) {
       throw new Error("ID must be an integer");
     }
   }
