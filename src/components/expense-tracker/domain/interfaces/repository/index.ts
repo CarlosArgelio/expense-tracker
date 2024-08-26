@@ -1,0 +1,1 @@
+export { IExpenseTrackerRepository } from "./IExpenseTrackerRepository";
