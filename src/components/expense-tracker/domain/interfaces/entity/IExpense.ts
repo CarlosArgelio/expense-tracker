@@ -1,10 +1,8 @@
-import { Amount, CreationDate, Description, ID } from "../../valueObject";
-
 export interface IExpense {
-  id: ID;
-  description: Description;
-  amount: Amount;
-  date: CreationDate;
+  id: number;
+  description: string;
+  amount: number;
+  date: Date;
 }
 export type ICreateExpense = Pick<IExpense, "description" | "amount">;
 export type IUpdateExpense = Partial<Pick<IExpense, "description" | "amount">>;
