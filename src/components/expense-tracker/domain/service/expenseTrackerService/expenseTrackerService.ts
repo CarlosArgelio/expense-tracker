@@ -30,4 +30,9 @@ export class ExpenseTrackerService {
     new ID(id);
     return this.repository.update(id, changes);
   }
+
+  delete(id: number) {
+    new ID(id);
+    return this.repository.delete(id);
+  }
 }
